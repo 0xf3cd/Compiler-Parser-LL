@@ -1,0 +1,2100 @@
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: S -> A S' 
+STACK: S # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: A -> int ID B 
+STACK: A S' # 
+
+TYPE: 1
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED:  -> 
+STACK: int ID B S' # 
+
+TYPE: 1
+TOKEN NAME: program
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID B S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: B -> C 
+STACK: B S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: C -> ( E ) F 
+STACK: C S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( E ) F S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: E -> G 
+STACK: E ) F S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: G -> H G' 
+STACK: G ) F S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: H -> int ID 
+STACK: H G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED:  -> 
+STACK: int ID G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID G' ) F S' # 
+
+TYPE: 2
+TOKEN NAME: ,
+TERMINAL: ,
+PRODUCTION USED: G' -> , G 
+STACK: G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: ,
+TERMINAL: ,
+PRODUCTION USED:  -> 
+STACK: , G ) F S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: G -> H G' 
+STACK: G ) F S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: H -> int ID 
+STACK: H G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED:  -> 
+STACK: int ID G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID G' ) F S' # 
+
+TYPE: 2
+TOKEN NAME: ,
+TERMINAL: ,
+PRODUCTION USED: G' -> , G 
+STACK: G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: ,
+TERMINAL: ,
+PRODUCTION USED:  -> 
+STACK: , G ) F S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: G -> H G' 
+STACK: G ) F S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: H -> int ID 
+STACK: H G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED:  -> 
+STACK: int ID G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID G' ) F S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: G' -> ε 
+STACK: G' ) F S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) F S' # 
+
+TYPE: 2
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED: F -> { I J } 
+STACK: F S' # 
+
+TYPE: 1
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED:  -> 
+STACK: { I J } S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: I -> K ; I 
+STACK: I J } S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: K -> int ID 
+STACK: K ; I J } S' # 
+
+TYPE: 1
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED:  -> 
+STACK: int ID ; I J } S' # 
+
+TYPE: 1
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID ; I J } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; I J } S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: I -> K ; I 
+STACK: I J } S' # 
+
+TYPE: 2
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED: K -> int ID 
+STACK: K ; I J } S' # 
+
+TYPE: 1
+TOKEN NAME: int
+TERMINAL: int
+PRODUCTION USED:  -> 
+STACK: int ID ; I J } S' # 
+
+TYPE: 1
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID ; I J } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; I J } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: I -> ε 
+STACK: I J } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: J -> L J' 
+STACK: J } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: L -> P 
+STACK: L J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: P -> ID = Q ; 
+STACK: P J' } S' # 
+
+TYPE: 1
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID = Q ; J' } S' # 
+
+TYPE: 1
+TOKEN NAME: =
+TERMINAL: =
+PRODUCTION USED:  -> 
+STACK: = Q ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 0
+TERMINAL: num
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 0
+TERMINAL: num
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 0
+TERMINAL: num
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 0
+TERMINAL: num
+PRODUCTION USED: V -> num 
+STACK: V U' R' Q' ; J' } S' # 
+
+TYPE: 1
+TOKEN NAME: 0
+TERMINAL: num
+PRODUCTION USED:  -> 
+STACK: num U' R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ; J' } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: J' -> J 
+STACK: J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: J -> L J' 
+STACK: J } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: L -> M 
+STACK: L J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: M -> if ( Q ) F M' 
+STACK: M J' } S' # 
+
+TYPE: 1
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED:  -> 
+STACK: if ( Q ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 3
+TERMINAL: num
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 3
+TERMINAL: num
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 3
+TERMINAL: num
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 3
+TERMINAL: num
+PRODUCTION USED: V -> num 
+STACK: V U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: 3
+TERMINAL: num
+PRODUCTION USED:  -> 
+STACK: num U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >=
+TERMINAL: >=
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >=
+TERMINAL: >=
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >=
+TERMINAL: >=
+PRODUCTION USED: Q' -> T Q 
+STACK: Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >=
+TERMINAL: >=
+PRODUCTION USED: T -> >= 
+STACK: T Q ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: >=
+TERMINAL: >=
+PRODUCTION USED:  -> 
+STACK: >= Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED: F -> { I J } 
+STACK: F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED:  -> 
+STACK: { I J } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: I -> ε 
+STACK: I J } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: J -> L J' 
+STACK: J } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: L -> M 
+STACK: L J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: M -> if ( Q ) F M' 
+STACK: M J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED:  -> 
+STACK: if ( Q ) F M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( Q ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: !=
+TERMINAL: !=
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: !=
+TERMINAL: !=
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: !=
+TERMINAL: !=
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: !=
+TERMINAL: !=
+PRODUCTION USED: Q' -> T Q 
+STACK: Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: !=
+TERMINAL: !=
+PRODUCTION USED: T -> != 
+STACK: T Q ) F M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: !=
+TERMINAL: !=
+PRODUCTION USED:  -> 
+STACK: != Q ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 15
+TERMINAL: num
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 15
+TERMINAL: num
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 15
+TERMINAL: num
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 15
+TERMINAL: num
+PRODUCTION USED: V -> num 
+STACK: V U' R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: 15
+TERMINAL: num
+PRODUCTION USED:  -> 
+STACK: num U' R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ) F M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) F M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED: F -> { I J } 
+STACK: F M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED:  -> 
+STACK: { I J } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: I -> ε 
+STACK: I J } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: J -> L J' 
+STACK: J } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: L -> M 
+STACK: L J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: M -> if ( Q ) F M' 
+STACK: M J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED:  -> 
+STACK: if ( Q ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( Q ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ==
+TERMINAL: ==
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ==
+TERMINAL: ==
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ==
+TERMINAL: ==
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ==
+TERMINAL: ==
+PRODUCTION USED: Q' -> T Q 
+STACK: Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ==
+TERMINAL: ==
+PRODUCTION USED: T -> == 
+STACK: T Q ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: ==
+TERMINAL: ==
+PRODUCTION USED:  -> 
+STACK: == Q ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 4
+TERMINAL: num
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 4
+TERMINAL: num
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 4
+TERMINAL: num
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 4
+TERMINAL: num
+PRODUCTION USED: V -> num 
+STACK: V U' R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: 4
+TERMINAL: num
+PRODUCTION USED:  -> 
+STACK: num U' R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED: F -> { I J } 
+STACK: F M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED:  -> 
+STACK: { I J } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: I -> ε 
+STACK: I J } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: J -> L J' 
+STACK: J } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: L -> O 
+STACK: L J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: O -> return O' ; 
+STACK: O J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED:  -> 
+STACK: return O' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: O' -> Q 
+STACK: O' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: J' -> ε 
+STACK: J' } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED:  -> 
+STACK: } M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: M' -> ε 
+STACK: M' J' } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: J' -> ε 
+STACK: J' } M' J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED:  -> 
+STACK: } M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: M' -> ε 
+STACK: M' J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: J' -> ε 
+STACK: J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED:  -> 
+STACK: } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: M' -> ε 
+STACK: M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: J' -> J 
+STACK: J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: J -> L J' 
+STACK: J } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: L -> M 
+STACK: L J' } S' # 
+
+TYPE: 2
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED: M -> if ( Q ) F M' 
+STACK: M J' } S' # 
+
+TYPE: 1
+TOKEN NAME: if
+TERMINAL: if
+PRODUCTION USED:  -> 
+STACK: if ( Q ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >
+TERMINAL: >
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >
+TERMINAL: >
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >
+TERMINAL: >
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >
+TERMINAL: >
+PRODUCTION USED: Q' -> T Q 
+STACK: Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: >
+TERMINAL: >
+PRODUCTION USED: T -> > 
+STACK: T Q ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: >
+TERMINAL: >
+PRODUCTION USED:  -> 
+STACK: > Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: V -> ( Q ) 
+STACK: V U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( Q ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: R' -> + R 
+STACK: R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED:  -> 
+STACK: + R Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ) F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) F M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED: F -> { I J } 
+STACK: F M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED:  -> 
+STACK: { I J } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: I -> ε 
+STACK: I J } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: J -> L J' 
+STACK: J } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: L -> P 
+STACK: L J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: P -> ID = Q ; 
+STACK: P J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID = Q ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: =
+TERMINAL: =
+PRODUCTION USED:  -> 
+STACK: = Q ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: R' -> + R 
+STACK: R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED:  -> 
+STACK: + R Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED: V -> ( Q ) 
+STACK: V U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( Q ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: b
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: *
+TERMINAL: *
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: *
+TERMINAL: *
+PRODUCTION USED: U' -> * U 
+STACK: U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: *
+TERMINAL: *
+PRODUCTION USED:  -> 
+STACK: * U R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: c
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED: R' -> + R 
+STACK: R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: +
+TERMINAL: +
+PRODUCTION USED:  -> 
+STACK: + R Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 1
+TERMINAL: num
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 1
+TERMINAL: num
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 1
+TERMINAL: num
+PRODUCTION USED: V -> num 
+STACK: V U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: 1
+TERMINAL: num
+PRODUCTION USED:  -> 
+STACK: num U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ; J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; J' } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: J' -> ε 
+STACK: J' } M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED:  -> 
+STACK: } M' J' } S' # 
+
+TYPE: 2
+TOKEN NAME: else
+TERMINAL: else
+PRODUCTION USED: M' -> else F 
+STACK: M' J' } S' # 
+
+TYPE: 1
+TOKEN NAME: else
+TERMINAL: else
+PRODUCTION USED:  -> 
+STACK: else F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED: F -> { I J } 
+STACK: F J' } S' # 
+
+TYPE: 1
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED:  -> 
+STACK: { I J } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: I -> ε 
+STACK: I J } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: J -> L J' 
+STACK: J } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: L -> P 
+STACK: L J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: P -> ID = Q ; 
+STACK: P J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID = Q ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: =
+TERMINAL: =
+PRODUCTION USED:  -> 
+STACK: = Q ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: a
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: J' -> ε 
+STACK: J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED:  -> 
+STACK: } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: while
+TERMINAL: while
+PRODUCTION USED: J' -> J 
+STACK: J' } S' # 
+
+TYPE: 2
+TOKEN NAME: while
+TERMINAL: while
+PRODUCTION USED: J -> L J' 
+STACK: J } S' # 
+
+TYPE: 2
+TOKEN NAME: while
+TERMINAL: while
+PRODUCTION USED: L -> N 
+STACK: L J' } S' # 
+
+TYPE: 2
+TOKEN NAME: while
+TERMINAL: while
+PRODUCTION USED: N -> while ( Q ) F 
+STACK: N J' } S' # 
+
+TYPE: 1
+TOKEN NAME: while
+TERMINAL: while
+PRODUCTION USED:  -> 
+STACK: while ( Q ) F J' } S' # 
+
+TYPE: 1
+TOKEN NAME: (
+TERMINAL: (
+PRODUCTION USED:  -> 
+STACK: ( Q ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ) F J' } S' # 
+
+TYPE: 1
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: <=
+TERMINAL: <=
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: <=
+TERMINAL: <=
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: <=
+TERMINAL: <=
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: <=
+TERMINAL: <=
+PRODUCTION USED: Q' -> T Q 
+STACK: Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: <=
+TERMINAL: <=
+PRODUCTION USED: T -> <= 
+STACK: T Q ) F J' } S' # 
+
+TYPE: 1
+TOKEN NAME: <=
+TERMINAL: <=
+PRODUCTION USED:  -> 
+STACK: <= Q ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 100
+TERMINAL: num
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 100
+TERMINAL: num
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 100
+TERMINAL: num
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 100
+TERMINAL: num
+PRODUCTION USED: V -> num 
+STACK: V U' R' Q' ) F J' } S' # 
+
+TYPE: 1
+TOKEN NAME: 100
+TERMINAL: num
+PRODUCTION USED:  -> 
+STACK: num U' R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ) F J' } S' # 
+
+TYPE: 1
+TOKEN NAME: )
+TERMINAL: )
+PRODUCTION USED:  -> 
+STACK: ) F J' } S' # 
+
+TYPE: 2
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED: F -> { I J } 
+STACK: F J' } S' # 
+
+TYPE: 1
+TOKEN NAME: {
+TERMINAL: {
+PRODUCTION USED:  -> 
+STACK: { I J } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: I -> ε 
+STACK: I J } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: J -> L J' 
+STACK: J } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: L -> P 
+STACK: L J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: P -> ID = Q ; 
+STACK: P J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID = Q ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: =
+TERMINAL: =
+PRODUCTION USED:  -> 
+STACK: = Q ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: j
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: *
+TERMINAL: *
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: *
+TERMINAL: *
+PRODUCTION USED: U' -> * U 
+STACK: U' R' Q' ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: *
+TERMINAL: *
+PRODUCTION USED:  -> 
+STACK: * U R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 2
+TERMINAL: num
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: 2
+TERMINAL: num
+PRODUCTION USED: V -> num 
+STACK: V U' R' Q' ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: 2
+TERMINAL: num
+PRODUCTION USED:  -> 
+STACK: num U' R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ; J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; J' } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: J' -> ε 
+STACK: J' } J' } S' # 
+
+TYPE: 1
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED:  -> 
+STACK: } J' } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: J' -> J 
+STACK: J' } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: J -> L J' 
+STACK: J } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: L -> O 
+STACK: L J' } S' # 
+
+TYPE: 2
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED: O -> return O' ; 
+STACK: O J' } S' # 
+
+TYPE: 1
+TOKEN NAME: return
+TERMINAL: return
+PRODUCTION USED:  -> 
+STACK: return O' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: O' -> Q 
+STACK: O' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: Q -> R Q' 
+STACK: Q ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: R -> U R' 
+STACK: R Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: U -> V U' 
+STACK: U R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED: V -> ID W 
+STACK: V U' R' Q' ; J' } S' # 
+
+TYPE: 1
+TOKEN NAME: i
+TERMINAL: ID
+PRODUCTION USED:  -> 
+STACK: ID W U' R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: W -> ε 
+STACK: W U' R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: U' -> ε 
+STACK: U' R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: R' -> ε 
+STACK: R' Q' ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED: Q' -> ε 
+STACK: Q' ; J' } S' # 
+
+TYPE: 1
+TOKEN NAME: ;
+TERMINAL: ;
+PRODUCTION USED:  -> 
+STACK: ; J' } S' # 
+
+TYPE: 2
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED: J' -> ε 
+STACK: J' } S' # 
+
+TYPE: 1
+TOKEN NAME: }
+TERMINAL: }
+PRODUCTION USED:  -> 
+STACK: } S' # 
+
+TYPE: 2
+TOKEN NAME: #
+TERMINAL: #
+PRODUCTION USED: S' -> ε 
+STACK: S' # 
+
+TYPE: 0
+TOKEN NAME: #
+TERMINAL: #
+PRODUCTION USED:  -> 
+STACK: # 
+
+TYPE: 3
+TOKEN NAME: #
+TERMINAL: 
+PRODUCTION USED:  -> 
+STACK: 
+
